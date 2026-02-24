@@ -1,4 +1,4 @@
-#import "defintions.typ": *
+#import "defintions.typ": font, normal-size, sections
 #import "frontpage.typ": frontpage
 
 #let is-last-page = state("is-last-page", false)
@@ -27,7 +27,7 @@
   set document(
     title: title,
   )
-  set text(size: normal-size, font: "Times New Roman", lang: "es", region: "VE")
+  set text(size: normal-size, font: font, lang: "es", region: "VE")
   set page(margin: (top: 4cm, bottom: 3cm, left: 4cm, right: 3cm))
   set par(
     leading: 1em,

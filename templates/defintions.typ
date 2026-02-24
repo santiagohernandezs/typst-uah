@@ -1,4 +1,5 @@
 #let normal-size = 12pt
+#let font = "Times New Roman"
 
 #let sections = (
   intro: "Introducción",
