@@ -1,5 +1,5 @@
 #import "@preview/datify:0.1.4": custom-date-format, month-name
-#import "defintions.typ": font
+#import "defintions.typ": font, normal-size
 
 #let logo = image("../assets/uah_logo.png", width: 100%)
 
@@ -15,7 +15,7 @@
     inset: 0.1cm,
     logo,
     [
-      #set text(size: 12pt, font: font, weight: "bold")
+      #set text(size: normal-size, font: font, weight: "bold")
       Universidad Alejandro de Humboldt \
       Facultad de Igeniería \
       Escuela de Ingeniería Informática \
@@ -27,12 +27,12 @@
 
   v(30%)
   set align(center)
-  set text(size: 12pt, font: font, weight: "bold")
+  set text(size: normal-size, font: font, weight: "bold")
   upper(title)
 
   v(20%)
   set align(right)
-  set text(size: 12pt, font: font, weight: "regular")
+  set text(size: normal-size, font: font, weight: "regular")
   for author in authors {
     align(right)[
       #author.name #author.id
