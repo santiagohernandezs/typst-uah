@@ -26,6 +26,7 @@
 ) = {
   set document(
     title: title,
+    author: authors.map(author => author.name),
   )
   set text(size: normal-size, font: font, lang: "es", region: "VE")
   set page(margin: (top: 4cm, bottom: 3cm, left: 4cm, right: 3cm))
