@@ -8,6 +8,8 @@
   authors: none,
   title: none,
 ) = {
+  let seccion = class.schedule + class.classNumber
+
   table(
     columns: (.4fr, 1fr),
     align: (center, center),
@@ -20,7 +22,7 @@
       Facultad de Igeniería \
       Escuela de Ingeniería Informática \
       #class.name \
-      Sección: #class.classNumber \
+      Sección: #seccion \
       #class.professor \
     ],
   )

@@ -19,8 +19,13 @@
 )
 
 #let classNumbers = (
-  computacionGrafica: "DCN0601IIV1",
-  circuitosElectronicos: "DCM0701IIV2",
+  computacionGrafica: "0601",
+  circuitosElectronicos: "0701",
+)
+
+#let schedules = (
+  morning: "DCM",
+  night: "DCN",
 )
 
 #let classes = (
@@ -28,11 +33,13 @@
     name: classesNames.computacionGrafica,
     professor: professors.computacionGrafica,
     classNumber: classNumbers.computacionGrafica,
+    schedule: schedules.night,
   ),
   circuitosElectronicos: (
     name: classesNames.circuitosElectronicos,
     professor: professors.circuitosElectronicos,
     classNumber: classNumbers.circuitosElectronicos,
+    schedule: schedules.night,
   ),
 )
 
