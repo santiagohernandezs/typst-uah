@@ -19,7 +19,7 @@
     [
       #set text(size: normal-size, font: font, weight: "bold")
       Universidad Alejandro de Humboldt \
-      Facultad de Igeniería \
+      Facultad de Ingeniería \
       Escuela de Ingeniería Informática \
       #class.name \
       Sección: #seccion \
