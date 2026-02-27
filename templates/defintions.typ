@@ -1,6 +1,9 @@
 #let normal-size = 12pt
 #let font = "Times New Roman"
 
+#let left = left + horizon
+#let center = center + horizon
+
 #let sections = (
   intro: "Introducción",
   des: "Desarrollo",

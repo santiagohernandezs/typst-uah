@@ -50,7 +50,7 @@
     block(it.body, above: 1.5em, below: 1.5em)
   }
 
-  show heading.where(level: 3).or(heading.where(level: 5)): it => {
+  show heading.where(level: 3): it => {
     set align(left)
     set text(size: normal-size)
     block(emph(it.body), above: 1.5em, below: 1.5em)
@@ -83,7 +83,6 @@
 
   set table(
     stroke: frame(1pt),
-    align: center + horizon,
     inset: 10pt,
   )
 
@@ -106,7 +105,9 @@
           #emph(it.caption.body)
         ]
       ]
+      #set par(justify: false)
       #it.body
+
     ]
   }
 
@@ -115,6 +116,11 @@
   outline()
   pagebreak()
 
+  // set page(numbering: "1", header: [
+  //   #set text(8pt)
+  //   #smallcaps[#title]
+  //   #h(1fr) #counter()
+  // ])
   set page(numbering: "1")
 
   doc

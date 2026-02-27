@@ -1,10 +1,13 @@
-#import "../templates/defintions.typ": sections
+#import "../templates/defintions.typ": center, left, sections
 #import "../templates/template.typ": section
 
 #section(
   sections.des,
 )[
   == Transistores
+  === tres
+  ==== Introducción a los transistores
+  ===== Definición y funcionamiento básico
 
   Estos dispositivos semiconductores son fundamentales en la electrónica moderna. Un transistor puede actuar como un interruptor o amplificador de señales eléctricas, lo que lo hace esencial para el funcionamiento de una amplia variedad de dispositivos electrónicos, desde computadoras hasta teléfonos móviles. Existen diferentes tipos de transistores, como los bipolares y los de efecto campo (FET), cada uno con sus propias características y aplicaciones específicas. Los transistores se utilizan en circuitos para controlar el flujo de corriente, amplificar señales y realizar funciones lógicas. Su capacidad para conmutar rápidamente entre estados de encendido y apagado los convierte en componentes clave en la construcción de circuitos digitales y analógicos. Además, los transistores han permitido la miniaturización de dispositivos electrónicos, lo que ha llevado a la creación de tecnologías más compactas y eficientes.
 
@@ -19,7 +22,56 @@
 
   == Circuitos electrónicos
 
-  Los circuitos electrónicos son conjuntos de componentes interconectados que realizan funciones específicas, como amplificación, conmutación o procesamiento de señales. Estos circuitos pueden ser analógicos, digitales o mixtos, dependiendo de la naturaleza de las señales que manejan. Los circuitos analógicos procesan señales continuas, mientras que los digitales trabajan con señales discretas. Los circuitos electrónicos se utilizan en una amplia variedad de aplicaciones, desde sistemas de comunicación hasta dispositivos de consumo y equipos industriales. La comprensión de cómo funcionan los circuitos electrónicos es crucial para el diseño y desarrollo de nuevas tecnologías, así como para la resolución de problemas en sistemas existentes. Además, el diseño de circuitos electrónicos implica la selección adecuada de componentes, la planificación de la disposición física y la implementación de técnicas de protección contra interferencias y fallos. En resumen, los circuitos electrónicos son la base de la tecnología moderna y su estudio es esencial para cualquier persona interesada en el campo de la electrónica y la ingeniería.
+  Los circuitos electrónicos son conjuntos de componentes interconectados que realizan funciones específicas, como amplificación, conmutación o procesamiento de señales. Estos circuitos pueden ser analógicos, digitales o mixtos, dependiendo de la naturaleza de las señales que manejan. Los circuitos analógicos procesan señales continuas, mientras que los digitales trabajan con señales discretas. Los circuitos electrónicos se utilizan en una amplia variedad de aplicaciones, desde sistemas de comunicación hasta dispositivos de consumo y equipos industriales. La comprensión de cómo funcionan los circuitos electrónicos es crucial para el diseño y desarrollo de nuevas tecnologías, así como para la resolución de problemas en sistemas existentes. Además, el diseño de circuitos electrónicos implica la selección adecuada de componentes, la planificación de la disposición física y la implementación de técnicas de protección contra interferencias y fallos. En resumen, los circuitos electrónicos son la base de la tecnología moderna y su estudio es esencial para cualquier persona interesada en el campo de la electrónica y la ingeniería. asi como la tabla @osi-model lo muestra
+  #figure(
+    kind: "table",
+    supplement: "Tabla ",
+    table(
+      columns: (.2fr, .4fr, .5fr, 1fr),
+      align: (
+        center,
+        center,
+        center,
+        left,
+      ),
+      table.header([Capa], [Nombre], [PDU], [Funciones y Mecanismos]),
+      [7],
+      [Aplicación],
+      [Datos de Aplicación],
+      [Punto de acceso a servicios de red para el usuario. Incluye protocolos como FTAM y X.400.],
+
+      [6],
+      [Presentación],
+      [Datos],
+      [Traduce formatos de datos, maneja el cifrado y la compresión para asegurar la legibilidad entre sistemas.],
+
+      [5],
+      [Sesión],
+      [Datos],
+      [Gestiona el diálogo entre aplicaciones, estableciendo puntos de control y recuperación de fallos.],
+
+      [4],
+      [Transporte],
+      [Segmento],
+      [Garantiza la transferencia de extremo a extremo con control de flujo y corrección de errores (clases TP0 a TP4).],
+
+      [3],
+      [Red],
+      [Paquete / Datagrama],
+      [Responsable del enrutamiento y direccionamiento lógico a través de múltiples nodos.],
+
+      [2],
+      [Enlace de Datos],
+      [Trama],
+      [Organiza los bits en marcos gestionables y maneja el acceso al medio físico.],
+
+      [1],
+      [Física],
+      [Bit],
+      [Transmisión de señales eléctricas, ópticas o de radio sobre el medio físico de conexión.],
+    ),
+    caption: "Datos",
+  ) <osi-model>
 
   === Aplicaciones de los transistores y circuitos electrónicos
 
