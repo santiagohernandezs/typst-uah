@@ -40,33 +40,75 @@
   show heading.where(level: 1): it => {
     set align(center)
     set text(size: normal-size)
-    it.body
+    block(it.body, above: 1.5em, below: 1.5em)
   }
 
   show heading.where(level: 2): it => {
     set align(left)
     set par(first-line-indent: (amount: 0em, all: true))
     set text(size: normal-size)
-    it.body
+    block(it.body, above: 1.5em, below: 1.5em)
   }
 
   show heading.where(level: 3).or(heading.where(level: 5)): it => {
     set align(left)
     set text(size: normal-size)
-    emph(it.body)
+    block(emph(it.body), above: 1.5em, below: 1.5em)
   }
 
-  show par: it => {
+  show heading.where(level: 4): it => {
+    set align(left)
+    set par(first-line-indent: (amount: 0em, all: true))
+    set text(size: normal-size)
     block(above: 1.5em, below: 1.5em)[
-      #it.body
+      #h(1.5em) #it.body
     ]
   }
+
+  show heading.where(level: 5): it => {
+    set align(left)
+    set par(first-line-indent: (amount: 0em, all: true))
+    set text(size: normal-size)
+    block(above: 1.5em, below: 1.5em)[
+      #h(1.5em) #emph(it.body)
+    ]
+  }
+
+  let frame(stroke) = (x, y) => (
+    left: none,
+    right: none,
+    top: if y < 2 { stroke } else { 0pt },
+    bottom: stroke,
+  )
+
+  set table(
+    stroke: frame(1pt),
+    align: center + horizon,
+    inset: 10pt,
+  )
 
   let fp = frontpage.with(
     class: class,
     authors: authors,
     title: title,
   )
+
+  show figure: it => {
+    set par(first-line-indent: (amount: 0em, all: true))
+    let itemId = it.caption.supplement + it.caption.numbering
+
+    block(above: 1.5em, below: 1.5em, width: 100%)[
+      #align(left)[
+        #block(below: 1em)[
+          #itemId
+        ]
+        #block(above: 1em, below: 1.5em)[
+          #emph(it.caption.body)
+        ]
+      ]
+      #it.body
+    ]
+  }
 
   fp()
 
