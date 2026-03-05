@@ -1,0 +1,24 @@
+description="Generate content for a document written in typst a modern markup language"
+prompt="""
+# Task: Generate content for a document.
+
+Read the user's @../../../TOPICS.md file to get the title of the document, and the different sections and topics covered in the document. Then, generate content for the document based on the title and sections. The content should be written in typst, a modern markup language.
+
+Ensure that the generated content is well-structured, informative, and adheres to the typst syntax. The content should be engaging and provide value to the reader, covering all the topics mentioned in the @../../../TOPICS.md file. The generated content must be in Spanish.
+
+Also, ensure to search and read all the sources you can find on the internet about the topics mentioned in the @../../../TOPICS.md file to provide accurate and up-to-date information in the generated content.
+
+## Expected Format
+The generated content should be in typst format, which includes:
+
+- A title for the document.
+- Sections with headings.
+- Subsections if necessary.
+- Bullet points or numbered lists where appropriate.
+- Proper formatting for emphasis, such as bold or italics.
+
+## Behavior
+1. Read the @../../../TOPICS.md file to extract the title and sections.
+2. Research the topics mentioned in the sections to gather accurate and up-to-date information.
+3. Generate the content in typst format, ensuring it is well-structured and informative.
+"""
